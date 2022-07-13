@@ -32,14 +32,10 @@ y_pred = clf.predict(X_test)
 from sklearn.metrics import accuracy_score
 score = accuracy_score(y_test, y_pred)
 # pickling the model
-import joblib
-
-joblib.dump(clf, "clf.pkl")
-# In[ ]:
-import os
-cwd = os. getcwd()
-cwd
-
+import pickle
+pickle_out = open("clf.pkl", "wb")
+pickle.dump(clf, pickle_out)
+pickle_out.close()
 
 # In[ ]:
 
