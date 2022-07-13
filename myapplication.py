@@ -17,6 +17,7 @@ if st.button("Submit"):
 
     # Unpickle classifier
     pickle_in = open('clf.pkl', 'rb')
+    clf = pickle.load(pickle_in)
    
   
   
