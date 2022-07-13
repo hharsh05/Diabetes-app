@@ -4,6 +4,8 @@ import joblib
 null=None
 # Title
 st.header("Streamlit Machine Learning App")
+st.write("This app is intended to check wheather you are suffering from diabetes or not")
+st.write("score 0 means you are not diabetic and 1 means you are diabetic")
 
 # Input bar 1
 MentalHealth = st.number_input("Enter Mental Health Score")
