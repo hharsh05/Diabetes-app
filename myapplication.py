@@ -16,7 +16,10 @@ BMI = st.number_input("Enter BMI")
 if st.button("Submit"):
 
     # Unpickle classifier
-    clf = pickle.load("clf.pkl",'rb')
+    pickle_in = open('clf.pkl', 'rb')
+    clf = pickle.load(pickle_in)
+  
+  
 
     # Store inputs into dataframe
     x = pd.DataFrame([[MentalHealth,BMI]],
