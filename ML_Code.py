@@ -18,10 +18,10 @@ X = df.iloc[:, [4,15]]
 y = df.iloc[:, 0]
 
 # splitting data into training and testing data with 30 % of data as testing data respectively
-from sklearn.model_selection import train_test_split
+from sklearn.linear_model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 0)
 
-# importing the random forest classifier model and training it on the dataset
+# importing the logistic regression  classifier model and training it on the dataset
 clf = LogisticRegression()
 clf.fit(X_train, y_train)
 
