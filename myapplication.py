@@ -30,4 +30,4 @@ if st.button("Submit"):
 
     # Output prediction
     st.text(f"This instance is a {prediction}")
-   st.text("Created by Mr.Harshit Harsh")
+  
