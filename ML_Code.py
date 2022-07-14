@@ -14,7 +14,7 @@ from sklearn.linear_model import LogisticRegression
 df = pd.read_csv('C:/Users/asus/Desktop/my patents/pupil vs wmc project/diabetes_012_health_indicators_BRFSS2015.csv')
 df.head()
 df.fillna(value=0, inplace=True)
-X = df.iloc[:, [4,15]]
+X = df.iloc[:, [4,15,5,11]]
 y = df.iloc[:, 0]
 
 # splitting data into training and testing data with 30 % of data as testing data respectively
