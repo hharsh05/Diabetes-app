@@ -18,12 +18,8 @@ BMI = st.number_input("Enter BMI, BMI = Weight(Kg)/(Height*Height(metre squared)
 HvyAlcoholConsump = st.number_input("Enter 1 if you consume alcohol frequently else enter 0")
 Smoker = st.number_input("Enter 1 if you are smoker  else enter 0")
 
-
-# If button is pressed
-if st.button("Submit"):
-    
-    
-    if ((HeartDiseaseorAttack ==0.00 or 1.00) and (HvyAlcoholConsump ==0.00 or 1.00) and (Smoker==0.00 or 1.00)):
+if ((HeartDiseaseorAttack ==0.00 or 1.00) and (HvyAlcoholConsump ==0.00 or 1.00) and (Smoker==0.00 or 1.00)):
+    if st.button("Submit"):
    
         clf = joblib.load("clf.pkl")
 
@@ -37,8 +33,11 @@ if st.button("Submit"):
         st.text(f"This instance is a {prediction}")
         if (prediction == 1 or 2):
             st.text("Consult a Doctor")
-    else:
-        st.text("Please follow instruction")
+else:
+    if st.button("Submit"):
+        st.text("please follow instruction")
+    
+
      
    
        
