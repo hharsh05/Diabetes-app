@@ -8,7 +8,7 @@ st.write("This app is intended to check wheather you are suffering from diabetes
 st.write("score 0 means you are not diabetic and 1 means you are diabetic")
 
 # Input bar 1
-MentalHealth = st.number_input("Enter Mental Health Score")
+MentalHealth = st.number_input("Enter Mental Health Score in Range 0-30")
 
 # Input bar 2
 BMI = st.number_input("Enter BMI")
