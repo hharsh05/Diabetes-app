@@ -17,9 +17,11 @@ HeartDiseaseorAttack = st.number_input("Enter 1 if you suffer from Heart Disease
 BMI = st.number_input("Enter BMI, BMI = Weight(Kg)/(Height*Height(metre squared))")
 HvyAlcoholConsump = st.number_input("Enter 1 if you consume alcohol frequently else enter 0")
 Smoker = st.number_input("Enter 1 if you are smoker  else enter 0")
-
-if ((HeartDiseaseorAttack ==0.00 or 1.00) and (HvyAlcoholConsump ==0.00 or 1.00) and (Smoker==0.00 or 1.00)):
-    if st.button("Submit"):
+if st.button("Submit"):
+    
+    
+    if ((HeartDiseaseorAttack ==0.00 or HeartDiseaseorAttack == 1.00) and (HvyAlcoholConsump ==0.00 or HvyAlcoholConsump ==1.00) and (Smoker==0.00 or Smoker ==1.00)):
+        
    
         clf = joblib.load("clf.pkl")
 
@@ -34,17 +36,7 @@ if ((HeartDiseaseorAttack ==0.00 or 1.00) and (HvyAlcoholConsump ==0.00 or 1.00)
         if (prediction == 1 or 2):
             st.text("Consult a Doctor")
 else:
-     if st.button("Submit"):
-   
-        clf = joblib.load("clf.pkl")
-
-    # Store inputs into dataframe
-        x = pd.DataFrame([[HeartDiseaseorAttack,BMI,Smoker,HvyAlcoholConsump]],
-                     columns = ["HeartDiseaseorAttack","BMI","Smoker","HvyAlcoholConsump"])
-    # Get prediction
-        prediction = clf.predict(x)[0]
-
-    # Output prediction
-        st.text(f"Please follow instructions")
+    
+    st.text(f"Please follow instructions")
         
     
