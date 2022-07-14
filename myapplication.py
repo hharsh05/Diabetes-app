@@ -21,9 +21,9 @@ Smoker = st.number_input("Enter 1 if you are smoker  else enter 0")
 
 # If button is pressed
 if st.button("Submit"):
+    
     if ((HeartDiseaseorAttack!=0.00 or 1.00) and (HvyAlcoholConsump!=0.00 or 1.00) and (Smoker!=0.00 or 1.00))= 0 or 1:
-        st.text("Please follow instruction")
-    else:
+   
         clf = joblib.load("clf.pkl")
 
     # Store inputs into dataframe
@@ -36,6 +36,9 @@ if st.button("Submit"):
         st.text(f"This instance is a {prediction}")
         if (prediction == 1 or 2):
             st.text("Consult a Doctor")
+     else:
+        st.text("please folloow instructions")
+       
     
         
    
