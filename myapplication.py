@@ -23,7 +23,7 @@ Smoker = st.number_input("Enter 1 if you are smoker  else enter 0")
 if st.button("Submit"):
     
     
-    if ((HeartDiseaseorAttack =0.00 or 1.00) and (HvyAlcoholConsump =0.00 or 1.00) and (Smoker=0.00 or 1.00)):
+    if ((HeartDiseaseorAttack ==0.00 or 1.00) and (HvyAlcoholConsump ==0.00 or 1.00) and (Smoker==0.00 or 1.00)):
    
         clf = joblib.load("clf.pkl")
 
