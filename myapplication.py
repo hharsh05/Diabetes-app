@@ -10,7 +10,7 @@ st.text("Created by Mr.Harshit Harsh")
 
 
 # Input bar 1
-MentalHealth = st.number_input("Enter Mental Health Score in Range 0-30")
+HeartDiseaseorAttack = st.number_input("Enter 1 if you suffer from Heart Disease or had an attack else enter 0")
 
 # Input bar 2
 BMI = st.number_input("Enter BMI, BMI = Weight(Kg)/(Height*Height(metre squared))")
@@ -25,8 +25,8 @@ if st.button("Submit"):
     clf = joblib.load("clf.pkl")
 
     # Store inputs into dataframe
-    x = pd.DataFrame([[MentalHealth,BMI,Smoker,HvyAlcoholConsump]],
-                     columns = ["MentalHealth","BMI","Smoker","HvyAlcoholConsump"])
+    x = pd.DataFrame([[HeartDiseaseorAttack,BMI,Smoker,HvyAlcoholConsump]],
+                     columns = ["HeartDiseaseorAttack","BMI","Smoker","HvyAlcoholConsump"])
     # Get prediction
     prediction = clf.predict(x)[0]
 
