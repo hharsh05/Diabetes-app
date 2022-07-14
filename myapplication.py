@@ -34,17 +34,17 @@ if ((HeartDiseaseorAttack ==0.00 or 1.00) and (HvyAlcoholConsump ==0.00 or 1.00)
         if (prediction == 1 or 2):
             st.text("Consult a Doctor")
 else:
-    if st.button("Submit"):
-        st.text("please follow instruction")
-    
+     if st.button("Submit"):
+   
+        clf = joblib.load("clf.pkl")
 
-     
-   
-       
-    
-        
-   
+    # Store inputs into dataframe
+        x = pd.DataFrame([[HeartDiseaseorAttack,BMI,Smoker,HvyAlcoholConsump]],
+                     columns = ["HeartDiseaseorAttack","BMI","Smoker","HvyAlcoholConsump"])
+    # Get prediction
+        prediction = clf.predict(x)[0]
 
-    
+    # Output prediction
+        st.text(f"Please follow instructions")
         
-   
+    
