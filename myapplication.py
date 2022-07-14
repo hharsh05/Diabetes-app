@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 null=None
 # Title
-st.header("Streamlit Machine Learning App")
+st.header("Diabetes Checker app")
 st.write("This app is intended to check wheather you are suffering from diabetes or not")
 st.write("score 0 means you are not diabetic and 1 means you are diabetic")
 
@@ -28,3 +28,9 @@ if st.button("Submit"):
 
     # Output prediction
     st.text(f"This instance is a {prediction}")
+    
+    
+    
+    
+    
+    st.text("Created by Mr.Harshit Harsh")
