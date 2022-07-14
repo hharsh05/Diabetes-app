@@ -11,7 +11,7 @@ st.write("score 0 means you are not diabetic and 1 means you are diabetic")
 MentalHealth = st.number_input("Enter Mental Health Score in Range 0-30")
 
 # Input bar 2
-BMI = st.number_input("Enter BMI")
+BMI = st.number_input("Enter BMI, BMI = Weight(Kg)/(Height*Height(metre squared))")
 
 
 # If button is pressed
