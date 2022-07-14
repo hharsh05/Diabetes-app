@@ -5,7 +5,7 @@ null=None
 # Title
 st.header("Diabetes Checker app")
 st.write("This app is intended to check wheather you are suffering from diabetes or not")
-st.write("score 0 means you are not diabetic and 1 means you are diabetic")
+st.write("score 0 means you are not diabetic and score of 1 or 2 means you are diabetic")
 st.text("Created by Mr.Harshit Harsh")
 
 
