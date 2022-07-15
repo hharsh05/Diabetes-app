@@ -6,13 +6,13 @@ null=None
 def load_images(file_name):
     img = Image.open(file_name)
     return st.image(img,width=300)
-img='appDiabetes.jpg'
+img='appDiabetes.JPG'
 load_images(img)
 # Title
 st.header("Diabetes Checker app")
 st.write("This app is intended to check wheather you are suffering from diabetes or not")
-st.write("score 0 means you are not diabetic and score of  2 means you are diabetic")
-st.text("Created by Mr.Harshit Harsh")
+st.write("score 0 means you are not diabetic and score of 1 or 2 means you are diabetic")
+
 
 
 # Input bar 1
@@ -39,16 +39,11 @@ if st.button("Submit"):
 
     # Output prediction
         st.text(f"This instance is a {prediction}")
-        if (prediction ==  2):
+        if (prediction == 1 or 2):
             st.text("Consult a Doctor")
     else:
         st.text(f"Please follow instructions")
-   
-           
- 
-        
-    
-
+st.text("Created by Mr.Harshit Harsh")
    
            
  
