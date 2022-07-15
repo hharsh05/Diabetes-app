@@ -1,7 +1,13 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from PIL import Image
 null=None
+def load_images(file_name):
+    img = Image.open(file_name)
+    return st.image(img,width=300)
+img='appDiabetes.JPG'
+load_images(img)
 # Title
 st.header("Diabetes Checker app")
 st.write("This app is intended to check wheather you are suffering from diabetes or not")
