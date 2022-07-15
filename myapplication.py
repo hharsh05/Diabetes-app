@@ -36,8 +36,13 @@ if st.button("Submit"):
         if (prediction == 1 or 2):
             st.text("Consult a Doctor")
     else:
-        if st.button("Submit"):
-            st.text(f"Please follow instructions")
+        st.text(f"Please follow instructions")
+   
+           
+ 
+        
+    
+
    
            
  
