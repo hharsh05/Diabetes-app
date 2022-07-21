@@ -39,8 +39,10 @@ if st.button("Submit"):
 
     # Output prediction
         st.text(f"This instance is a {prediction}")
-        if (prediction == 1 or 2):
+        if (prediction ==  2):
             st.text("Consult a Doctor")
+        else:
+            st.text("You are not diabetic")
     else:
         st.text(f"Please follow instructions")
 st.text("Created by Mr.Harshit Harsh")
